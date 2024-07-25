@@ -10,17 +10,16 @@ Update the Tkinter via Homebrew-<br/>
 ```bash
 brew install tcl-tk
 ```
-<br/>
+
 Get into the Nano text editor on the terminal by running-<br/>
-```bash
-nano ~/.zshrc
-```
-<br/>
-If permission is denied, it uses sudo <br/>
 ```bash
 sudo nano ~/.zshrc
 ```
-Add the Environmental Variable -<br/>
+If permission is denied, uses sudo <br/>
+```bash
+sudo nano ~/.zshrc
+```
+Add the Environmental Variable at the end after the `#<<<Conda initialize<<<-<br/>
 ```bash
 export PATH="/usr/local/opt/tcl-tk/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/tcl-tk/lib"
@@ -29,7 +28,13 @@ export PKG_CONFIG_PATH="/usr/local/opt/tcl-tk/lib/pkgconfig"
 export TK_SILENCE_DEPRECATION=1
 ```
 <br/>
-Save the Changes using Ctrl + O and Enter to Confirm. and Press Ctrl + X to exit the Nano Editor
+Save the Changes using Ctrl + O and Enter to Confirm. and Press Ctrl + X to exit the Nano Editor.<br/>
+Now, apply the changes by runnning below in your terminal<br/>
+
+```bash
+source ~/.zshrc
+```
+Wallah!!! 
 
 
 
